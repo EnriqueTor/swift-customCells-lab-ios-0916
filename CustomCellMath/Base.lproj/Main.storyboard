@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tu9-lK-vzH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,6 +7,79 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Math-->
+        <scene sceneID="M0e-hJ-eKP">
+            <objects>
+                <tableViewController id="Lid-Ym-hK3" customClass="TableViewController" customModule="CustomCellMath" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" id="ed4-iP-myh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mathCell" id="IZK-51-LmS" customClass="MathTableViewCell" customModule="CustomCellMath" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="78"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IZK-51-LmS" id="EdS-7Q-vmB">
+                                    <frame key="frameInset" width="375" height="77"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xPJ-kV-2ut">
+                                            <frame key="frameInset" minX="8" width="305" height="78"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKg-oV-x35">
+                                                    <frame key="frameInset" minY="23" width="59" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1I-i9-3tc">
+                                                    <frame key="frameInset" minX="82" minY="23" width="59" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNH-hV-2iX">
+                                                    <frame key="frameInset" minX="165" minY="23" width="59" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-qn-feX">
+                                                    <frame key="frameInset" minX="247" minY="23" width="59" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xPJ-kV-2ut" firstAttribute="top" secondItem="EdS-7Q-vmB" secondAttribute="top" id="7By-cj-eJz"/>
+                                        <constraint firstAttribute="trailing" secondItem="xPJ-kV-2ut" secondAttribute="trailing" constant="35" id="KPr-ad-bvl"/>
+                                        <constraint firstItem="xPJ-kV-2ut" firstAttribute="leading" secondItem="EdS-7Q-vmB" secondAttribute="leading" constant="35" id="VIe-nz-5FB"/>
+                                        <constraint firstAttribute="bottom" secondItem="xPJ-kV-2ut" secondAttribute="bottom" id="vdC-Wr-pNK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="firstNumberLabel" destination="sKg-oV-x35" id="AT7-Ap-1xU"/>
+                                    <outlet property="fourthNumberLabel" destination="VwJ-qn-feX" id="ZHW-gf-uZJ"/>
+                                    <outlet property="secondNumberLabel" destination="u1I-i9-3tc" id="HZt-PD-RJC"/>
+                                    <outlet property="thirdNumberLabel" destination="nNH-hV-2iX" id="Rs8-wn-5H6"/>
+                                    <segue destination="Jzt-HL-kg1" kind="show" identifier="numberDetail" id="bWF-SD-Weh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Lid-Ym-hK3" id="Hv9-qQ-HEn"/>
+                            <outlet property="delegate" destination="Lid-Ym-hK3" id="CfB-pI-3ve"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Math" id="1yY-7v-DjF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xS-83-2SE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="164"/>
+        </scene>
         <!--Display Math View Controller-->
         <scene sceneID="E7L-Ds-3va">
             <objects>
@@ -280,7 +353,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5v-pg-uCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1525.5" y="378.5"/>
+            <point key="canvasLocation" x="1482" y="164"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BCn-w1-zXk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tu9-lK-vzH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cv0-a6-Pba">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lid-Ym-hK3" kind="relationship" relationship="rootViewController" id="Uxq-yn-Ffo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZS-Sq-b1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.200000000000003" y="164.16791604197903"/>
         </scene>
     </scenes>
 </document>
